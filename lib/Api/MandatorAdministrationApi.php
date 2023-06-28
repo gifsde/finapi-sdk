@@ -378,7 +378,7 @@ class MandatorAdministrationApi
         if (isset($change_client_credentials_params)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($change_client_credentials_params));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($change_client_credentials_params));
             } else {
                 $httpBody = $change_client_credentials_params;
             }
@@ -399,7 +399,7 @@ class MandatorAdministrationApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -816,7 +816,7 @@ class MandatorAdministrationApi
         if (isset($iban_rules_params)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($iban_rules_params));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($iban_rules_params));
             } else {
                 $httpBody = $iban_rules_params;
             }
@@ -837,7 +837,7 @@ class MandatorAdministrationApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -1254,7 +1254,7 @@ class MandatorAdministrationApi
         if (isset($keyword_rules_params)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($keyword_rules_params));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($keyword_rules_params));
             } else {
                 $httpBody = $keyword_rules_params;
             }
@@ -1275,7 +1275,7 @@ class MandatorAdministrationApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -1669,7 +1669,7 @@ class MandatorAdministrationApi
         if (isset($iban_rule_identifiers_params)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($iban_rule_identifiers_params));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($iban_rule_identifiers_params));
             } else {
                 $httpBody = $iban_rule_identifiers_params;
             }
@@ -1690,7 +1690,7 @@ class MandatorAdministrationApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -2084,7 +2084,7 @@ class MandatorAdministrationApi
         if (isset($keyword_rule_identifiers_params)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($keyword_rule_identifiers_params));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($keyword_rule_identifiers_params));
             } else {
                 $httpBody = $keyword_rule_identifiers_params;
             }
@@ -2105,7 +2105,7 @@ class MandatorAdministrationApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -2476,7 +2476,7 @@ class MandatorAdministrationApi
         if (isset($user_identifiers_params)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user_identifiers_params));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($user_identifiers_params));
             } else {
                 $httpBody = $user_identifiers_params;
             }
@@ -2497,7 +2497,7 @@ class MandatorAdministrationApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -2924,7 +2924,7 @@ class MandatorAdministrationApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -3351,7 +3351,7 @@ class MandatorAdministrationApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -3973,7 +3973,7 @@ class MandatorAdministrationApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -4344,7 +4344,7 @@ class MandatorAdministrationApi
         if (isset($switch_api_version_params)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($switch_api_version_params));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($switch_api_version_params));
             } else {
                 $httpBody = $switch_api_version_params;
             }
@@ -4365,7 +4365,7 @@ class MandatorAdministrationApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);

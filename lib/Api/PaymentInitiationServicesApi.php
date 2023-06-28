@@ -501,7 +501,7 @@ class PaymentInitiationServicesApi
         if (isset($direct_debit_with_account_details)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($direct_debit_with_account_details));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($direct_debit_with_account_details));
             } else {
                 $httpBody = $direct_debit_with_account_details;
             }
@@ -522,7 +522,7 @@ class PaymentInitiationServicesApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -925,7 +925,7 @@ class PaymentInitiationServicesApi
         if (isset($payment_with_account_details)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($payment_with_account_details));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($payment_with_account_details));
             } else {
                 $httpBody = $payment_with_account_details;
             }
@@ -946,7 +946,7 @@ class PaymentInitiationServicesApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -1349,7 +1349,7 @@ class PaymentInitiationServicesApi
         if (isset($standalone_payment_details)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($standalone_payment_details));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($standalone_payment_details));
             } else {
                 $httpBody = $standalone_payment_details;
             }
@@ -1370,7 +1370,7 @@ class PaymentInitiationServicesApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -1773,7 +1773,7 @@ class PaymentInitiationServicesApi
         if (isset($standing_order_details)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($standing_order_details));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($standing_order_details));
             } else {
                 $httpBody = $standing_order_details;
             }
@@ -1794,7 +1794,7 @@ class PaymentInitiationServicesApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);

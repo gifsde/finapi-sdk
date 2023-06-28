@@ -518,7 +518,7 @@ class AccountInformationServicesApi
         if (isset($bank_connection_update_task_details)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($bank_connection_update_task_details));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($bank_connection_update_task_details));
             } else {
                 $httpBody = $bank_connection_update_task_details;
             }
@@ -539,7 +539,7 @@ class AccountInformationServicesApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -942,7 +942,7 @@ class AccountInformationServicesApi
         if (isset($bank_connection_import_details)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($bank_connection_import_details));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($bank_connection_import_details));
             } else {
                 $httpBody = $bank_connection_import_details;
             }
@@ -963,7 +963,7 @@ class AccountInformationServicesApi
 
             } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+                $httpBody = json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
