@@ -70,7 +70,7 @@ class BankInterface implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_ais_supported' => 'bool',
         'is_pis_supported' => 'bool',
         'payment_capabilities' => '\OpenAPI\Client\Model\BankInterfacePaymentCapabilities',
-        'ais_account_types' => 'AccountType[]'
+        'ais_account_types' => '\OpenAPI\Client\Model\AccountType[]'
     ];
 
     /**
